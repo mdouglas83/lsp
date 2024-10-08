@@ -3,7 +3,7 @@ import React from "react";
 import { Modal } from 'cabem-react-next'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { EntityInstrumentCashActivityDataGrid, EntityInstrumentLoanActivityDataGrid } from "generated/tables"; {/* HALP! see tables.js */}
+import { EntityInstrumentCashActivityDataGrid, EntityInstrumentLoanActivityDataGrid } from "generated/tables";
 import { DateColumn, AccountingColumn, TextColumn, IDColumn } from 'utilities/Formatters/FormattedColumns'
 
 
@@ -78,7 +78,6 @@ class ViewCashActivityModal extends Modal {
                 {/* Cash Activity DataGrid  */}
                 Cash Activity
                 <div className="ap-data-grid">
-                    {/* HALP! */}
                     <EntityInstrumentCashActivityDataGrid
                         fetchOnReady
                         paginationRowsPerPage={25}
@@ -92,7 +91,6 @@ class ViewCashActivityModal extends Modal {
                 Loan Activity
                 <div className="ap-data-grid">
                     {/* this grid is stuck on loading and never makes the network call.  No error message */}
-                    {/* HALP! */}
                     <EntityInstrumentLoanActivityDataGrid
                         fetchOnReady
                         paginationRowsPerPage={25}
